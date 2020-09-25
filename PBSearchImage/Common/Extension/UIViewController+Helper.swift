@@ -17,8 +17,8 @@ extension UIViewController {
                           okButtonTapCompletionHander: (() -> Void)? = nil) {
         if let error = error {
             let title = showTitle ? error.title : Constants.emptyString
-            showAlertMessage(error.errorMessage,
-                             title: title,
+            showAlertMessage(title,
+                             message: error.errorMessage,
                              okButtonText: okButtonText,
                              action: action,
                              okButtonTapCompletionHander: okButtonTapCompletionHander)
@@ -27,8 +27,8 @@ extension UIViewController {
         }
     }
     
-    func showAlertMessage(_ message: String? = UIStringConstants.generalMessage,
-                          title: String? = UIStringConstants.generalAlertTitle,
+    func showAlertMessage(_ title: String? = UIStringConstants.generalAlertTitle,
+                          message: String? = UIStringConstants.generalMessage,
                           okButtonText: String? = UIStringConstants.ok,
                           cancelButtonText: String? = nil,
                           action: UIAlertAction.Type = UIAlertAction.self,

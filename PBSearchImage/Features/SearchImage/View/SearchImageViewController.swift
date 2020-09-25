@@ -13,6 +13,7 @@ class SearchImageViewController: UIViewController {
     @IBOutlet private (set) weak var searchBar: UISearchBar!
     
     var viewModel = ImageListViewModel(networkClient: NetworkClient(with: PBImageNetworkConstants.kSearchImage))
+    var canShowAlert: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,9 @@ class SearchImageViewController: UIViewController {
     private func doInitialSetUp() {
         viewModel.imageListData.addAndNotify(observer: self) { [weak self] in
             self?.collectionView.reloadData()
+            if self?.canShowAlert == true && self?.viewModel.imageListData.value.isEmpty == true {
+                self?.showAlertMessage(message: UIStringConstants.noRecordFound)
+            }
         }
         viewModel.onError = { [weak self] error in
             self?.showAlertMessage(error)
@@ -79,6 +83,7 @@ extension SearchImageViewController: UICollectionViewDataSource, UICollectionVie
         if indexPath.row == viewModel.fetchedRecords, cell.isKind(of: LoadMoreRecordCollectionViewCell.self) {
             if let queryText = searchBar.text, queryText.isNonEmpty {
                 (cell as? LoadMoreRecordCollectionViewCell)?.showLoader()
+                canShowAlert = false
                 viewModel.getMoreImages(keyword: queryText)
             } else {
                 (cell as? LoadMoreRecordCollectionViewCell)?.hideLoader()
@@ -101,6 +106,7 @@ extension SearchImageViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == Constants.lineTermination {
             searchBar.resignFirstResponder()
+            canShowAlert = true
             fetchImages(searchBar.text)
         }
         let finalEnteredString = (searchBar.text ?? Constants.emptyString) + text

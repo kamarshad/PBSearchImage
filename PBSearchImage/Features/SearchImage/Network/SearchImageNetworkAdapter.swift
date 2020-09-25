@@ -1,5 +1,5 @@
 //
-//  ImageListNetworkAdapter.swift
+//  SearchImageNetworkAdapter.swift
 //  PBSearchImage
 //
 //  Created by Mohammad Kamar Shad on 9/24/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ImageListNetworkAdapter {
+class SearchImageNetworkAdapter {
     private let networkClient: NetworkClientAdapter
     private var currentTask: URLSessionTask?
     

@@ -9,7 +9,7 @@
 import Foundation
 
 class ImageListViewModel {
-    private let networkAdapter: ImageListNetworkAdapter
+    private let networkAdapter: SearchImageNetworkAdapter
     private let networkClient: NetworkClientAdapter
     private (set) var imageListData: DynamicType<[ImageDisplayable]> = DynamicType([])
     private (set) var isFetchRecordInProgress = false
@@ -20,7 +20,7 @@ class ImageListViewModel {
     
     init(networkClient: NetworkClientAdapter) {
         self.networkClient = networkClient
-        self.networkAdapter = ImageListNetworkAdapter(networkClient: networkClient)
+        self.networkAdapter = SearchImageNetworkAdapter(networkClient: networkClient)
     }
     
     func getImages(keyword: String) {

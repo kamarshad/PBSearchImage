@@ -32,20 +32,21 @@ enum APIConstant {
 // Considering the timeline using the messages here. better approach is to read the message from localised string file
 
 enum UIStringConstants {
-    static let noNetworkConnection = "No active internet connection found. Kindly check you are connected to internet"
-    static let badURL = "Bad URL fomat found"
-    static let emptyResponse = "Empty resppnse is received from server"
-    static let invalidResponseFormat = "Invalid response format is received from server"
-    static let invalidRequestFormat = "Invalid request format"
-    static let serverError = "Something went wrong"
-    static let responseMappingError = "Error occurred during the model mapping"
-    static let generalMessage = "Something went wrong. Please try after sometime"
-    static let invalidStatus = "Invalid response status is received"
-    static let apiKeyMissing = "API key is missing. Make sure a valid api key is added in APIConstant.\nFollow READ ME for more details"
+    static let noNetworkConnection = "No active internet connection found. Kindly check you are connected to internet."
+    static let badURL = "Bad URL fomat found."
+    static let emptyResponse = "Empty resppnse is received from server."
+    static let invalidResponseFormat = "Invalid response format is received from server."
+    static let invalidRequestFormat = "Invalid request format."
+    static let serverError = "Something went wrong."
+    static let responseMappingError = "Error occurred during the model mapping."
+    static let generalMessage = "Something went wrong. Please try after sometime."
+    static let invalidStatus = "Invalid response status is received."
+    static let apiKeyMissing = "API key is missing. Make sure a valid api key is added in APIConstant.\nFollow READ ME for more details."
     static let generalAlertTitle = "Alert"
     static let errorAlertTitle = "Error"
     static let ok = "Ok"
     static let cancel = "Cancel"
+    static let noRecordFound = "No record found against the entered keyword. Kindly try with different keyword."
 }
 
 enum ModelConstants {

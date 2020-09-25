@@ -10,7 +10,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet private (set) weak var imageView: UIImageView!
-    
     var searchedImages: [ImageDisplayable] = []
     var selectImageIndex: Int = 0
     
