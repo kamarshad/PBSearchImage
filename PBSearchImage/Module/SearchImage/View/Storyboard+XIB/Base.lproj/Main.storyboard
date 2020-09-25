@@ -12,7 +12,7 @@
         <!--Search Image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SearchImageViewController" id="BYZ-38-t0r" customClass="SearchImageViewController" customModule="PBImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchImageViewController" id="BYZ-38-t0r" customClass="SearchImageViewController" customModule="PBSearchImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchImageCollectionViewCell" id="2TD-oJ-yrr" customClass="SearchImageCollectionViewCell" customModule="PBImageApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchImageCollectionViewCell" id="2TD-oJ-yrr" customClass="SearchImageCollectionViewCell" customModule="PBSearchImage" customModuleProvider="target">
                                         <rect key="frame" x="10" y="10" width="394" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xCY-8a-ptP">
@@ -62,7 +62,7 @@
                                             <outlet property="imageView" destination="GR9-Hf-dww" id="vb5-mx-0vu"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadMoreRecordCollectionViewCell" id="kD4-Bn-nbf" customClass="LoadMoreRecordCollectionViewCell" customModule="PBImageApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LoadMoreRecordCollectionViewCell" id="kD4-Bn-nbf" customClass="LoadMoreRecordCollectionViewCell" customModule="PBSearchImage" customModuleProvider="target">
                                         <rect key="frame" x="10" y="160" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y6G-iw-1HN">
@@ -78,7 +78,7 @@
                                                         </activityIndicatorView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching more records..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-fJ-jNt">
                                                             <rect key="frame" x="67" y="0.0" width="327" height="76"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -141,7 +141,7 @@
         <!--Detail Screen-->
         <scene sceneID="Pe8-a3-5gR">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="7Y5-HW-E86" customClass="DetailViewController" customModule="PBImageApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="7Y5-HW-E86" customClass="DetailViewController" customModule="PBSearchImage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SxF-ax-qxg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

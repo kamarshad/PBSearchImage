@@ -7,12 +7,23 @@
 //
 
 import UIKit
-
-
+import Kingfisher
 
 extension UIImageView {
     func setImageWith(_ urlString: String,
                       placeholderImage placeholder: UIImage? = nil,
+                      scaleFactor: CGFloat = UIScreen.main.scale,
                       completion: DownloadImageBlock? = nil) {
+        let processor = DownsamplingImageProcessor(size: bounds.size)
+        kf.indicatorType = .activity
+        let options: KingfisherOptionsInfo = [
+            .processor(processor),
+            .scaleFactor(scaleFactor),
+            .transition(.fade(1)),
+            .cacheOriginalImage
+        ]
+        kf.setImage(with: urlString.url,
+                    placeholder: placeholder,
+                    options: options)
     }
 }
