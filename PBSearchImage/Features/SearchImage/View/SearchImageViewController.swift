@@ -82,7 +82,7 @@ class SearchImageViewController: UIViewController {
     }
     
     // Don't allow empty string
-    private func fetchImages(_ keyword: String?) {
+    func fetchImages(_ keyword: String?) {
         if let queryText = keyword, queryText.isNonEmpty {
             searchQuery = queryText
             canShowAlert = true

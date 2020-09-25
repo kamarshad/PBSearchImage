@@ -5,10 +5,11 @@ target 'PBSearchImage' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for PBImageApp
+  # Pods for PBSearchImage
    pod 'Kingfisher', '~> 5.0'
   target 'PBSearchImageTests' do
     inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
   end
-
 end
