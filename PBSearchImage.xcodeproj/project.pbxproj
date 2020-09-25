@@ -36,7 +36,7 @@
 		CD4A48E7251DB141006F962C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4A48B5251DB141006F962C /* LaunchScreen.storyboard */; };
 		CD4A48E8251DB141006F962C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4A48B7251DB141006F962C /* Main.storyboard */; };
 		CD4A48E9251DB141006F962C /* SearchImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48B9251DB141006F962C /* SearchImageViewController.swift */; };
-		CD4A48EA251DB141006F962C /* URLRequest+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48BC251DB141006F962C /* URLRequest+Core.swift */; };
+		CD4A48EA251DB141006F962C /* URLRequest+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48BC251DB141006F962C /* URLRequest+Helper.swift */; };
 		CD4A48EB251DB141006F962C /* URL+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48BD251DB141006F962C /* URL+Helper.swift */; };
 		CD4A48EC251DB141006F962C /* PBServerConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4A48BF251DB141006F962C /* PBServerConfig.plist */; };
 		CD4A48ED251DB141006F962C /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48C1251DB141006F962C /* NetworkConstants.swift */; };
@@ -127,7 +127,7 @@
 		CD4A48B6251DB141006F962C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4A48B8251DB141006F962C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD4A48B9251DB141006F962C /* SearchImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImageViewController.swift; sourceTree = "<group>"; };
-		CD4A48BC251DB141006F962C /* URLRequest+Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Core.swift"; sourceTree = "<group>"; };
+		CD4A48BC251DB141006F962C /* URLRequest+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Helper.swift"; sourceTree = "<group>"; };
 		CD4A48BD251DB141006F962C /* URL+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Helper.swift"; sourceTree = "<group>"; };
 		CD4A48BF251DB141006F962C /* PBServerConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PBServerConfig.plist; sourceTree = "<group>"; };
 		CD4A48C1251DB141006F962C /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -413,7 +413,7 @@
 		CD4A48BB251DB141006F962C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CD4A48BC251DB141006F962C /* URLRequest+Core.swift */,
+				CD4A48BC251DB141006F962C /* URLRequest+Helper.swift */,
 				CD4A48BD251DB141006F962C /* URL+Helper.swift */,
 			);
 			path = Extension;
@@ -816,7 +816,7 @@
 				CD4A48E3251DB141006F962C /* ImageListModel.swift in Sources */,
 				CD4A48DD251DB141006F962C /* ImageListViewModel.swift in Sources */,
 				CD4A4839251DA894006F962C /* AppDelegate.swift in Sources */,
-				CD4A48EA251DB141006F962C /* URLRequest+Core.swift in Sources */,
+				CD4A48EA251DB141006F962C /* URLRequest+Helper.swift in Sources */,
 				CD4A48F7251DB141006F962C /* NetworkClient.swift in Sources */,
 				CD4A48D3251DB141006F962C /* UIImageView+Helper.swift in Sources */,
 				CD4A48EB251DB141006F962C /* URL+Helper.swift in Sources */,

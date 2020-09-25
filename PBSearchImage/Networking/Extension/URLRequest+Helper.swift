@@ -1,5 +1,5 @@
 //
-//  URLRequest+.swift
+//  URLRequest+Helper.swift
 //  PBSearchImage
 //
 //  Created by Mohammad Kamar Shad on 9/24/20.
