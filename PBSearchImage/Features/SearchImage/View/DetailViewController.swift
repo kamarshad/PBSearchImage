@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
     var searchedImages: [ImageDisplayable] = []
     var selectImageIndex: Int = 0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         doInitialSetUp()
@@ -37,7 +36,7 @@ class DetailViewController: UIViewController {
         }
     }
     
-    @objc private func swipeMade(_ sender: UISwipeGestureRecognizer) {
+    @objc func swipeMade(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
             if selectImageIndex < searchedImages.count {
                 selectImageIndex += 1

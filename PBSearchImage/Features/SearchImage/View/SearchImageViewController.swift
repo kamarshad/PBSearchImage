@@ -50,27 +50,18 @@ class SearchImageViewController: UIViewController {
     private func configureRecentSearchVC() {
         removeRecentSearchVC()
         // If there is no saved search found
-        guard recentSearchViewModel.recentSearches.isNonEmpty else { return }
-        guard let recentSearchVC = recentSearchController else {
-            return
-        }
+        guard recentSearchViewModel.recentSearches.isNonEmpty, let recentSearchVC = recentSearchController else { return }
         addChild(recentSearchVC)
         let originY = searchBar.frame.size.height + searchBar.frame.origin.y
-        recentSearchVC.view.frame = CGRect(x: 0, y: originY, width: view.frame.size.width, height: 0)
-        UIView.animate(withDuration: 0.6, animations: {
-            recentSearchVC.view.frame = CGRect(x: 0, y: originY, width: self.view.frame.size.width, height: 130)
-            
-        }, completion: nil)
+        recentSearchVC.view.frame = CGRect(x: view.frame.origin.y, y: originY, width: view.frame.size.width, height: 130)
         view.addSubview(recentSearchVC.view)
         view.bringSubviewToFront(recentSearchVC.view)
         recentSearchVC.recentSearchCompletion = { recentSearch in
             // Let's trigger the api call only if the searchbar is not having the same text
             if recentSearch != self.searchBar.text {
                 self.fetchImages(recentSearch)
-                self.view.endEditing(true)
-            } else {
-                self.removeRecentSearchVC()
             }
+            self.removeRecentSearchVC()
         }
         recentSearchVC.reloadRecentSearches()
     }
@@ -79,6 +70,7 @@ class SearchImageViewController: UIViewController {
         willMove(toParent: nil)
         recentSearchController?.view.removeFromSuperview()
         recentSearchController?.removeFromParent()
+        view.endEditing(true)
     }
     
     // Don't allow empty string
@@ -178,7 +170,6 @@ extension SearchImageViewController: UISearchBarDelegate {
         configureRecentSearchVC()
         return true
     }
-    
 }
 
 private enum CollectionViewConstants {

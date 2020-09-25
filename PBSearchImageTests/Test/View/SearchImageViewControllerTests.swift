@@ -2,7 +2,7 @@
 //  SearchImageViewController.swift
 //  PBSearchImageTests
 //
-//  Created by Mohammad Kamar Shad on 09/05/2020.
+//  Created by Mohammad Kamar Shad on 9/25/20.
 //  Copyright © 2020 MKS. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ class SearchImageViewControllerTests: QuickSpec {
     var defaultResult = 20
     
     override func spec() {
-        describe("SearchImageViewControllerTests") {
+        describe("SearchImageViewController UT's") {
             beforeEach {
                 self.searchImageVC = SearchImageViewController.stub()
             }
@@ -110,35 +110,92 @@ class SearchImageViewControllerTests: QuickSpec {
                     expect(self.searchImageVC.navigationController?.topViewController?.isKind(of: DetailViewController.self)).toEventuallyNot(beNil(), timeout: TestsConstants.DefaultTimeoutNavigation)
                 }
             }
-            context("when user types if it is greater than the maximum input") {
-                it("should not let type that value") {
-                    let currentText = "KXQIKBGZSK VLINYYKUPJ IIQPXFBVWT CADVMORILI  MQRZFSZHFM EFQOABZIJW VICXNYODBR IDIQHDPYJK IDIQHDPYJKH"
-                    self.searchImageVC.searchBar.text = currentText
-                    let range = NSRange(location: currentText.count, length: 0)
-                    let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
-                                                                                           shouldChangeTextIn: range, replacementText: "A")
-                    expect(expectedResult) == false
+            context("when user types in searchbar") {
+                context("and entered keyword is greater than the maximum input") {
+                    it("should not let type that value") {
+                        let currentText = "KXQIKBGZSK VLINYYKUPJ IIQPXFBVWT CADVMORILI  MQRZFSZHFM EFQOABZIJW VICXNYODBR IDIQHDPYJK IDIQHDPYJKH"
+                        self.searchImageVC.searchBar.text = currentText
+                        let range = NSRange(location: currentText.count, length: 0)
+                        let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
+                                                                                               shouldChangeTextIn: range, replacementText: "A")
+                        expect(expectedResult) == false
+                    }
+                }
+                context("and entered keyword is less than the maximum input") {
+                    it("should let type that value") {
+                        let currentText = "KXQIKBGZSK VLINYYKUPJ IIQPXFBVWT CADVMORILI  MQRZFSZHFM EFQOABZIJW VICXNYODBR IDIQHDPYJK"
+                        self.searchImageVC.searchBar.text = currentText
+                        let range = NSRange(location: currentText.count, length: 0)
+                        let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
+                                                                                               shouldChangeTextIn: range, replacementText: "IDIQHDPYJKH")
+                        expect(expectedResult) == true
+                    }
+                }
+                context("and enetered valid length keyword and tap on search button of keyboard") {
+                    it("should trigger the search") {
+                        let currentText = Constants.defaultKeyword
+                        self.searchImageVC.searchBar.text = currentText
+                        let range = NSRange(location: currentText.count, length: 0)
+                        let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
+                                                                                               shouldChangeTextIn: range, replacementText: Constants.lineTermination)
+                        expect(expectedResult) == true
+                        expect(self.searchImageVC.viewModel.pageNo>0) == true
+                    }
                 }
             }
-            context("when user types if it is less than the maximum input") {
-                it("should let type that value") {
-                    let currentText = "KXQIKBGZSK VLINYYKUPJ IIQPXFBVWT CADVMORILI  MQRZFSZHFM EFQOABZIJW VICXNYODBR IDIQHDPYJK"
-                    self.searchImageVC.searchBar.text = currentText
-                    let range = NSRange(location: currentText.count, length: 0)
-                    let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
-                                                                                           shouldChangeTextIn: range, replacementText: "IDIQHDPYJKH")
-                    expect(expectedResult) == true
+            context("when user tap in searchbar") {
+                context("and if there were few searches earlier performed by user") {
+                    beforeEach {
+                        let currentText = Constants.defaultKeyword
+                        self.searchImageVC.searchBar.text = currentText
+                        let persistentStore = UserDefaultsManagerMock()
+                        persistentStore[PersistentKeys.recentSearch] = [Constants.defaultKeyword, "Recent Search 2"]
+                        self.searchImageVC.recentSearchViewModel = RecentSearchViewModel(databasePeristable: persistentStore)
+                        _ = self.searchImageVC.searchBar.delegate?.searchBarShouldBeginEditing?(self.searchImageVC.searchBar)
+                    }
+                    it("should have recent search view controller as child view controller") {
+                        expect(self.searchImageVC.children.isNonEmpty) == true
+                    }
                 }
-            }
-            context("when user types and tap on search button of keyboard") {
-                it("should trigger the search") {
-                    let currentText = "Apple"
-                    self.searchImageVC.searchBar.text = currentText
-                    let range = NSRange(location: currentText.count, length: 0)
-                    let expectedResult = self.searchImageVC.searchBar.delegate?.searchBar?(self.searchImageVC.searchBar,
-                                                                                           shouldChangeTextIn: range, replacementText: Constants.lineTermination)
-                    expect(expectedResult) == true
-                    expect(self.searchImageVC.viewModel.pageNo>0) == true
+                context("and if there were searches performed by user") {
+                    context("and user select any of the listed recent searches") {
+                        beforeEach {
+                            let currentText = Constants.defaultKeyword
+                            self.searchImageVC.searchBar.text = currentText
+                            let persistentStore = UserDefaultsManagerMock()
+                            persistentStore[PersistentKeys.recentSearch] = ["Recent Search 1", "Recent Search 2"]
+                            let recentSearchViewModel = RecentSearchViewModel(databasePeristable: persistentStore)
+                            self.searchImageVC.recentSearchViewModel = recentSearchViewModel
+                            _ = self.searchImageVC.searchBar.delegate?.searchBarShouldBeginEditing?(self.searchImageVC.searchBar)
+                            let recentSearchVC = self.searchImageVC.children.first as? RecentSearchViewController
+                            recentSearchVC?.viewModel = recentSearchViewModel
+                            recentSearchVC?.reloadRecentSearches()
+                            recentSearchVC?.tableView(recentSearchVC!.tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+                        }
+                        it("should remove the recent search view controller from search image screen") {
+                            expect(self.searchImageVC.children.isEmpty) == true
+                        }
+                    }
+                }
+                
+                context("and if there was no search performed by user") {
+                    beforeEach {
+                        let currentText = Constants.defaultKeyword
+                        self.searchImageVC.searchBar.text = currentText
+                        _ = self.searchImageVC.searchBar.delegate?.searchBarShouldBeginEditing?(self.searchImageVC.searchBar)
+                    }
+                    it("should have recent search view controller as child view controller") {
+                        expect(self.searchImageVC.children.isEmpty) == true
+                    }
+                    
+                }
+                context("and user dragges the collection view") {
+                    beforeEach {
+                        self.searchImageVC.scrollViewDidEndDragging(UIScrollView(), willDecelerate: true)
+                    }
+                    it("should recent search view controller removed from search result") {
+                        expect(self.searchImageVC.children.isEmpty) == true
+                    }
                 }
             }
         }

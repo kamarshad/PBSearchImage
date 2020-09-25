@@ -2,7 +2,7 @@
 //  SearchImageViewController+Stub.swift
 //  PBSearchImageTests
 //
-//  Created by Mohammad Kamar Shad on 09/05/2020.
+//  Created by Mohammad Kamar Shad on 9/25/20.
 //  Copyright © 2020 MKS. All rights reserved.
 //
 
@@ -15,8 +15,8 @@ extension SearchImageViewController {
         let searchListVC = storyboard.instantiateViewController(withIdentifier: SearchImageViewController.identifier) as! SearchImageViewController
         let mockNetworkClient = NetworkClientMock()
         mockNetworkClient.json = ImageListModel.jsonStub(with: fileName)
-        let mockedViewModel = ImageListViewModel(networkClient: mockNetworkClient)
-        searchListVC.viewModel = mockedViewModel
+        searchListVC.viewModel = ImageListViewModel(networkClient: mockNetworkClient)
+        searchListVC.recentSearchViewModel = RecentSearchViewModel(databasePeristable: UserDefaultsManagerMock())
         _ = searchListVC.view
         searchListVC.simulateViewLifeCycle()
         return searchListVC

@@ -2,7 +2,7 @@
 //  DetailViewControllerTests.swift
 //  PBSearchImageTests
 //
-//  Created by Mohammad Kamar Shad on 09/05/2020.
+//  Created by Mohammad Kamar Shad on 9/25/20.
 //  Copyright © 2020 MKS. All rights reserved.
 //
 
@@ -17,7 +17,7 @@ class DetailViewControllerTests: QuickSpec {
     var searchedImages: [ImageDisplayable] = []
     
     override func spec() {
-        describe("DetailViewControllerTests") {
+        describe("DetailViewController UT's") {
             beforeEach {
                 self.searchedImages = ImageListModel.stub()?.records ?? []
                 self.detailVC = DetailViewController.stub(with: self.searchedImages, selectedImageIndex: 0)
@@ -32,7 +32,7 @@ class DetailViewControllerTests: QuickSpec {
                 }
             }
             
-            context("when passed model is nil") {
+            context("when passed model is empty") {
                 beforeEach {
                     self.detailVC = DetailViewController.stub()
                 }
@@ -45,6 +45,41 @@ class DetailViewControllerTests: QuickSpec {
                 
                 it("should all elements have default values") {
                     expect(self.detailVC.imageView.image == nil) == true
+                }
+            }
+            context("when image is displayed from passed searchedImages array at selected index") {
+                context("and user swipe right to left") {
+                    beforeEach {
+                        self.searchedImages = ImageListModel.stub()?.records ?? []
+                        self.detailVC = DetailViewController.stub(with: self.searchedImages, selectedImageIndex: 0)
+                        let swipeGestureLeft = UISwipeGestureRecongnizerMock(target: self.detailVC,
+                                                                             action: #selector(DetailViewController.swipeMade(_:)))
+                        swipeGestureLeft.perfomSwipe(with: .left)
+                    }
+                    afterEach {
+                        self.detailVC = nil
+                    }
+                    it("should load the image from next index of searchedImages array") {
+                        expect(self.detailVC.selectImageIndex == 1) == true
+                    }
+                }
+                context("and user swipe left to right") {
+                    beforeEach {
+                        self.searchedImages = ImageListModel.stub()?.records ?? []
+                        self.detailVC = DetailViewController.stub(with: self.searchedImages, selectedImageIndex: 3)
+                        
+                        let swipeGestureLeft = UISwipeGestureRecongnizerMock(target: self.detailVC,
+                                                                             action: #selector(DetailViewController.swipeMade(_:)))
+                        swipeGestureLeft.perfomSwipe(with: .right)
+                    }
+                    
+                    afterEach {
+                        self.detailVC = nil
+                    }
+                    
+                    it("should load the image from previous index of searchedImages array") {
+                        expect(self.detailVC.selectImageIndex == 2) == true
+                    }
                 }
             }
         }

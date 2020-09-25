@@ -2,7 +2,7 @@
 //  ImageListModelTests.swift
 //  PBSearchImageTests
 //
-//  Created by Mohammad Kamar Shad on 09/05/2020.
+//  Created by Mohammad Kamar Shad on 9/25/20.
 //  Copyright © 2020 MKS. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ class ImageListModelTests: QuickSpec {
     var listModel: ImageListModel!
     
     override func spec() {
-        describe("ImageListModelTests") {
+        describe("ImageListModel UT's") {
             context("when model instantiate with default JSON") {
                 beforeEach {
                     self.listModel = ImageListModel.stub()
@@ -24,14 +24,12 @@ class ImageListModelTests: QuickSpec {
                 afterEach {
                     self.listModel = nil
                 }
-                
                 it("should have initialised along with its properties") {
                     expect(self.listModel).notTo(beNil())
                     expect(self.listModel.totalAvailableRecords > 0 ) == true
                     expect(self.listModel.fetchedRecords > 0 ) == true
                     expect(self.listModel.isNonEmpty) == true
                 }
-               
             }
         }
     }

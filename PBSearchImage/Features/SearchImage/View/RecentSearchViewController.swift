@@ -13,9 +13,9 @@ typealias RecentSearchCompletionBlock = (_ recentSearch: String) -> Void
 
 class RecentSearchViewController: UIViewController {
     @IBOutlet private (set) var tableView: UITableView!
-    let viewModel = RecentSearchViewModel(databasePeristable: UserDefaultsManager())
+    var viewModel = RecentSearchViewModel(databasePeristable: UserDefaultsManager())
     var recentSearchCompletion: RecentSearchCompletionBlock?
-    private var recentSearches: [String] = []
+    private (set) var recentSearches: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -65,7 +65,7 @@
 		CD4A4942251DFE27006F962C /* searchImageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A4929251DFE27006F962C /* searchImageResponse.json */; };
 		CD4A4943251DFE27006F962C /* searchImageResponse1.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A492A251DFE27006F962C /* searchImageResponse1.json */; };
 		CD4A4944251DFE27006F962C /* searchImageResponse2.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A492B251DFE27006F962C /* searchImageResponse2.json */; };
-		CD4A4945251DFE27006F962C /* DetailViewControllerTests+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492C251DFE27006F962C /* DetailViewControllerTests+Stub.swift */; };
+		CD4A4945251DFE27006F962C /* DetailViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492C251DFE27006F962C /* DetailViewController+Stub.swift */; };
 		CD4A4946251DFE27006F962C /* SearchImageViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492D251DFE27006F962C /* SearchImageViewController+Stub.swift */; };
 		CD4A4947251DFE27006F962C /* PBCodable+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492E251DFE27006F962C /* PBCodable+Stub.swift */; };
 		CD4A4948251DFE27006F962C /* ImageListModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492F251DFE27006F962C /* ImageListModel+Stub.swift */; };
@@ -76,6 +76,11 @@
 		CD4A494D251DFE27006F962C /* ImageListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4939251DFE27006F962C /* ImageListModelTests.swift */; };
 		CD4A494E251DFE27006F962C /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A493B251DFE27006F962C /* DetailViewControllerTests.swift */; };
 		CD4A494F251DFE27006F962C /* SearchImageViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A493C251DFE27006F962C /* SearchImageViewControllerTests.swift */; };
+		CD4A4951251E0C03006F962C /* UserDefaultsManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4950251E0C03006F962C /* UserDefaultsManagerMock.swift */; };
+		CD4A4953251E156F006F962C /* UISwipeGestureRecongnizerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4952251E156F006F962C /* UISwipeGestureRecongnizerMock.swift */; };
+		CD4A4955251E25D0006F962C /* RecentSearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4954251E25D0006F962C /* RecentSearchViewControllerTests.swift */; };
+		CD4A4957251E2834006F962C /* RecentSearchViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4956251E2834006F962C /* RecentSearchViewController+Stub.swift */; };
+		CD4A4959251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4958251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +156,7 @@
 		CD4A4929251DFE27006F962C /* searchImageResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse.json; sourceTree = "<group>"; };
 		CD4A492A251DFE27006F962C /* searchImageResponse1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse1.json; sourceTree = "<group>"; };
 		CD4A492B251DFE27006F962C /* searchImageResponse2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse2.json; sourceTree = "<group>"; };
-		CD4A492C251DFE27006F962C /* DetailViewControllerTests+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailViewControllerTests+Stub.swift"; sourceTree = "<group>"; };
+		CD4A492C251DFE27006F962C /* DetailViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Stub.swift"; sourceTree = "<group>"; };
 		CD4A492D251DFE27006F962C /* SearchImageViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchImageViewController+Stub.swift"; sourceTree = "<group>"; };
 		CD4A492E251DFE27006F962C /* PBCodable+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PBCodable+Stub.swift"; sourceTree = "<group>"; };
 		CD4A492F251DFE27006F962C /* ImageListModel+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageListModel+Stub.swift"; sourceTree = "<group>"; };
@@ -162,6 +167,11 @@
 		CD4A4939251DFE27006F962C /* ImageListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListModelTests.swift; sourceTree = "<group>"; };
 		CD4A493B251DFE27006F962C /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		CD4A493C251DFE27006F962C /* SearchImageViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImageViewControllerTests.swift; sourceTree = "<group>"; };
+		CD4A4950251E0C03006F962C /* UserDefaultsManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerMock.swift; sourceTree = "<group>"; };
+		CD4A4952251E156F006F962C /* UISwipeGestureRecongnizerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwipeGestureRecongnizerMock.swift; sourceTree = "<group>"; };
+		CD4A4954251E25D0006F962C /* RecentSearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchViewControllerTests.swift; sourceTree = "<group>"; };
+		CD4A4956251E2834006F962C /* RecentSearchViewController+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearchViewController+Stub.swift"; sourceTree = "<group>"; };
+		CD4A4958251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchDatabaseAdapterTests.swift; sourceTree = "<group>"; };
 		D80D3E956B00AC3B83A9247E /* Pods_PBSearchImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBSearchImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0855AB0F077AEDA3A30F92D /* Pods-PBSearchImageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImageTests.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImageTests/Pods-PBSearchImageTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F556E6F94F38D338FDC6A6E5 /* Pods-PBSearchImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImage.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImage/Pods-PBSearchImage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -512,7 +522,8 @@
 			children = (
 				CD4A4927251DFE27006F962C /* ImageRequestModel+Stub.swift */,
 				CD4A4928251DFE27006F962C /* Resources */,
-				CD4A492C251DFE27006F962C /* DetailViewControllerTests+Stub.swift */,
+				CD4A492C251DFE27006F962C /* DetailViewController+Stub.swift */,
+				CD4A4956251E2834006F962C /* RecentSearchViewController+Stub.swift */,
 				CD4A492D251DFE27006F962C /* SearchImageViewController+Stub.swift */,
 				CD4A492E251DFE27006F962C /* PBCodable+Stub.swift */,
 				CD4A492F251DFE27006F962C /* ImageListModel+Stub.swift */,
@@ -534,7 +545,9 @@
 			isa = PBXGroup;
 			children = (
 				CD4A4931251DFE27006F962C /* ReachabilityMock.swift */,
+				CD4A4952251E156F006F962C /* UISwipeGestureRecongnizerMock.swift */,
 				CD4A4932251DFE27006F962C /* NetworkClientMock.swift */,
+				CD4A4950251E0C03006F962C /* UserDefaultsManagerMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -562,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4A4937251DFE27006F962C /* SearchImageNetworkAdapterTests.swift */,
+				CD4A4958251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -579,6 +593,7 @@
 			children = (
 				CD4A493B251DFE27006F962C /* DetailViewControllerTests.swift */,
 				CD4A493C251DFE27006F962C /* SearchImageViewControllerTests.swift */,
+				CD4A4954251E25D0006F962C /* RecentSearchViewControllerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -828,15 +843,20 @@
 				CD4A4948251DFE27006F962C /* ImageListModel+Stub.swift in Sources */,
 				CD4A494B251DFE27006F962C /* ImageListViewModelTests.swift in Sources */,
 				CD4A4949251DFE27006F962C /* ReachabilityMock.swift in Sources */,
-				CD4A4945251DFE27006F962C /* DetailViewControllerTests+Stub.swift in Sources */,
+				CD4A4945251DFE27006F962C /* DetailViewController+Stub.swift in Sources */,
 				CD4A494D251DFE27006F962C /* ImageListModelTests.swift in Sources */,
 				CD4A4946251DFE27006F962C /* SearchImageViewController+Stub.swift in Sources */,
 				CD4A493D251DFE27006F962C /* TestsConstants.swift in Sources */,
+				CD4A4959251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift in Sources */,
 				CD4A4947251DFE27006F962C /* PBCodable+Stub.swift in Sources */,
 				CD4A494A251DFE27006F962C /* NetworkClientMock.swift in Sources */,
 				CD4A494F251DFE27006F962C /* SearchImageViewControllerTests.swift in Sources */,
+				CD4A4957251E2834006F962C /* RecentSearchViewController+Stub.swift in Sources */,
+				CD4A4951251E0C03006F962C /* UserDefaultsManagerMock.swift in Sources */,
+				CD4A4953251E156F006F962C /* UISwipeGestureRecongnizerMock.swift in Sources */,
 				CD4A4940251DFE27006F962C /* UIViewController+Tests.swift in Sources */,
 				CD4A494E251DFE27006F962C /* DetailViewControllerTests.swift in Sources */,
+				CD4A4955251E25D0006F962C /* RecentSearchViewControllerTests.swift in Sources */,
 				CD4A4941251DFE27006F962C /* ImageRequestModel+Stub.swift in Sources */,
 				CD4A493E251DFE27006F962C /* JSONHelper.swift in Sources */,
 				CD4A494C251DFE27006F962C /* SearchImageNetworkAdapterTests.swift in Sources */,
