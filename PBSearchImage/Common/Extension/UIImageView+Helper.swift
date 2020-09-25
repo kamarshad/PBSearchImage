@@ -18,7 +18,6 @@ extension UIImageView {
         kf.indicatorType = .activity
         let options: KingfisherOptionsInfo = [
             .processor(processor),
-            .scaleFactor(scaleFactor),
             .transition(.fade(1)),
             .cacheOriginalImage
         ]

@@ -52,6 +52,12 @@
 		CD4A48F6251DB141006F962C /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48CE251DB141006F962C /* CustomError.swift */; };
 		CD4A48F7251DB141006F962C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48D0251DB141006F962C /* NetworkClient.swift */; };
 		CD4A48FB251DB3C5006F962C /* CustomErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48FA251DB3C5006F962C /* CustomErrorType.swift */; };
+		CD4A4914251DF64E006F962C /* DataBasePersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4911251DF64E006F962C /* DataBasePersistable.swift */; };
+		CD4A4915251DF64E006F962C /* RecentSearchDatabaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4912251DF64E006F962C /* RecentSearchDatabaseAdapter.swift */; };
+		CD4A4916251DF64E006F962C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4913251DF64E006F962C /* DatabaseManager.swift */; };
+		CD4A4919251DF6B2006F962C /* RecentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4917251DF6B1006F962C /* RecentSearchViewController.swift */; };
+		CD4A491A251DF6B2006F962C /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4918251DF6B1006F962C /* RecentSearchTableViewCell.swift */; };
+		CD4A491C251DF6DD006F962C /* RecentSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A491B251DF6DD006F962C /* RecentSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +120,12 @@
 		CD4A48CE251DB141006F962C /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		CD4A48D0251DB141006F962C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		CD4A48FA251DB3C5006F962C /* CustomErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorType.swift; sourceTree = "<group>"; };
+		CD4A4911251DF64E006F962C /* DataBasePersistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBasePersistable.swift; sourceTree = "<group>"; };
+		CD4A4912251DF64E006F962C /* RecentSearchDatabaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchDatabaseAdapter.swift; sourceTree = "<group>"; };
+		CD4A4913251DF64E006F962C /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CD4A4917251DF6B1006F962C /* RecentSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchViewController.swift; sourceTree = "<group>"; };
+		CD4A4918251DF6B1006F962C /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
+		CD4A491B251DF6DD006F962C /* RecentSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchViewModel.swift; sourceTree = "<group>"; };
 		D80D3E956B00AC3B83A9247E /* Pods_PBSearchImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBSearchImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0855AB0F077AEDA3A30F92D /* Pods-PBSearchImageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImageTests.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImageTests/Pods-PBSearchImageTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F556E6F94F38D338FDC6A6E5 /* Pods-PBSearchImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImage.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImage/Pods-PBSearchImage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,10 +195,11 @@
 		CD4A4837251DA894006F962C /* PBSearchImage */ = {
 			isa = PBXGroup;
 			children = (
+				CD4A4838251DA894006F962C /* AppDelegate.swift */,
+				CD4A4910251DF64E006F962C /* Database */,
 				CD4A48BA251DB141006F962C /* Networking */,
 				CD4A4892251DB141006F962C /* Common */,
 				CD4A48A1251DB141006F962C /* Features */,
-				CD4A4838251DA894006F962C /* AppDelegate.swift */,
 				CD4A4860251DA9AD006F962C /* Resources */,
 			);
 			path = PBSearchImage;
@@ -265,6 +278,7 @@
 		CD4A48A4251DB141006F962C /* SearchImage */ = {
 			isa = PBXGroup;
 			children = (
+				CD4A491D251DF890006F962C /* Adapter */,
 				CD4A48A5251DB141006F962C /* ViewModel */,
 				CD4A48A7251DB141006F962C /* TypeBinder */,
 				CD4A48A9251DB141006F962C /* Network */,
@@ -277,6 +291,7 @@
 		CD4A48A5251DB141006F962C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD4A491B251DF6DD006F962C /* RecentSearchViewModel.swift */,
 				CD4A48A6251DB141006F962C /* ImageListViewModel.swift */,
 			);
 			path = ViewModel;
@@ -295,7 +310,6 @@
 			children = (
 				CD4A48AA251DB141006F962C /* PBImageNetworkConstants.swift */,
 				CD4A48AB251DB141006F962C /* PBAPIEndpointConfig.plist */,
-				CD4A48AC251DB141006F962C /* SearchImageNetworkAdapter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -314,9 +328,11 @@
 			children = (
 				CD4A48B1251DB141006F962C /* DetailViewController.swift */,
 				CD4A48B2251DB141006F962C /* SearchImageCollectionViewCell.swift */,
+				CD4A4918251DF6B1006F962C /* RecentSearchTableViewCell.swift */,
+				CD4A4917251DF6B1006F962C /* RecentSearchViewController.swift */,
 				CD4A48B3251DB141006F962C /* LoadMoreRecordCollectionViewCell.swift */,
-				CD4A48B4251DB141006F962C /* Storyboard+XIB */,
 				CD4A48B9251DB141006F962C /* SearchImageViewController.swift */,
+				CD4A48B4251DB141006F962C /* Storyboard+XIB */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +429,24 @@
 				CD4A48D0251DB141006F962C /* NetworkClient.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		CD4A4910251DF64E006F962C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A4911251DF64E006F962C /* DataBasePersistable.swift */,
+				CD4A4913251DF64E006F962C /* DatabaseManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CD4A491D251DF890006F962C /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				CD4A48AC251DB141006F962C /* SearchImageNetworkAdapter.swift */,
+				CD4A4912251DF64E006F962C /* RecentSearchDatabaseAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +621,7 @@
 			files = (
 				CD4A48F6251DB141006F962C /* CustomError.swift in Sources */,
 				CD4A48ED251DB141006F962C /* NetworkConstants.swift in Sources */,
+				CD4A491C251DF6DD006F962C /* RecentSearchViewModel.swift in Sources */,
 				CD4A48D5251DB141006F962C /* UIResponder+Helper.swift in Sources */,
 				CD4A48DA251DB141006F962C /* Constants.swift in Sources */,
 				CD4A48E5251DB141006F962C /* SearchImageCollectionViewCell.swift in Sources */,
@@ -599,11 +634,14 @@
 				CD4A48DF251DB141006F962C /* PBImageNetworkConstants.swift in Sources */,
 				CD4A48FB251DB3C5006F962C /* CustomErrorType.swift in Sources */,
 				CD4A48D7251DB141006F962C /* Encodable+Helper.swift in Sources */,
+				CD4A491A251DF6B2006F962C /* RecentSearchTableViewCell.swift in Sources */,
 				CD4A48D6251DB141006F962C /* UIAlertController+Helper.swift in Sources */,
 				CD4A48E4251DB141006F962C /* DetailViewController.swift in Sources */,
 				CD4A48D1251DB141006F962C /* UIViewController+Helper.swift in Sources */,
 				CD4A48D9251DB141006F962C /* String+Helper.swift in Sources */,
 				CD4A48F4251DB141006F962C /* JSONResponseParser.swift in Sources */,
+				CD4A4915251DF64E006F962C /* RecentSearchDatabaseAdapter.swift in Sources */,
+				CD4A4914251DF64E006F962C /* DataBasePersistable.swift in Sources */,
 				CD4A48E2251DB141006F962C /* ImageListRequestModel.swift in Sources */,
 				CD4A48E3251DB141006F962C /* ImageListModel.swift in Sources */,
 				CD4A48DD251DB141006F962C /* ImageListViewModel.swift in Sources */,
@@ -615,6 +653,8 @@
 				CD4A48D8251DB141006F962C /* Array+Helper.swift in Sources */,
 				CD4A48DE251DB141006F962C /* DynamicType.swift in Sources */,
 				CD4A48D4251DB141006F962C /* UIAlertAction+Helper.swift in Sources */,
+				CD4A4919251DF6B2006F962C /* RecentSearchViewController.swift in Sources */,
+				CD4A4916251DF64E006F962C /* DatabaseManager.swift in Sources */,
 				CD4A48F2251DB141006F962C /* ResponseDataParsable.swift in Sources */,
 				CD4A48F1251DB141006F962C /* NetworkConstantAdapter.swift in Sources */,
 				CD4A48EF251DB141006F962C /* NetworkClientAdapter.swift in Sources */,
