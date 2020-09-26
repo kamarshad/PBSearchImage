@@ -7,6 +7,7 @@ target 'PBSearchImage' do
 
   # Pods for PBSearchImage
    pod 'Kingfisher', '~> 5.0'
+   pod 'Firebase/Crashlytics'
   target 'PBSearchImageTests' do
     inherit! :search_paths
     pod 'Quick'

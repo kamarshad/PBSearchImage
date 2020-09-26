@@ -80,6 +80,7 @@
 		CD4A4955251E25D0006F962C /* RecentSearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4954251E25D0006F962C /* RecentSearchViewControllerTests.swift */; };
 		CD4A4957251E2834006F962C /* RecentSearchViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4956251E2834006F962C /* RecentSearchViewController+Stub.swift */; };
 		CD4A4959251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4958251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift */; };
+		CD4A495F251F4F62006F962C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4A495E251F4F61006F962C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		CD4A4954251E25D0006F962C /* RecentSearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchViewControllerTests.swift; sourceTree = "<group>"; };
 		CD4A4956251E2834006F962C /* RecentSearchViewController+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearchViewController+Stub.swift"; sourceTree = "<group>"; };
 		CD4A4958251E3574006F962C /* RecentSearchDatabaseAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchDatabaseAdapterTests.swift; sourceTree = "<group>"; };
+		CD4A495E251F4F61006F962C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D80D3E956B00AC3B83A9247E /* Pods_PBSearchImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBSearchImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0855AB0F077AEDA3A30F92D /* Pods-PBSearchImageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImageTests.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImageTests/Pods-PBSearchImageTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F556E6F94F38D338FDC6A6E5 /* Pods-PBSearchImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBSearchImage.debug.xcconfig"; path = "Target Support Files/Pods-PBSearchImage/Pods-PBSearchImage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				CD4A48B5251DB141006F962C /* LaunchScreen.storyboard */,
 				CD4A4879251DAB05006F962C /* Info.plist */,
+				CD4A495E251F4F61006F962C /* GoogleService-Info.plist */,
 				CD4A4841251DA896006F962C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -607,6 +610,7 @@
 				CD4A4832251DA894006F962C /* Frameworks */,
 				CD4A4833251DA894006F962C /* Resources */,
 				568D6ACAFFA0FD847DF66AE9 /* [CP] Embed Pods Frameworks */,
+				CD4A4960251F5003006F962C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -685,6 +689,7 @@
 				CD4A4842251DA896006F962C /* Assets.xcassets in Resources */,
 				CD4A48E8251DB141006F962C /* Main.storyboard in Resources */,
 				CD4A48EC251DB141006F962C /* PBServerConfig.plist in Resources */,
+				CD4A495F251F4F62006F962C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +743,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CD4A4960251F5003006F962C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		D12591AD40DE727EA08DE02D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
