@@ -1,6 +1,6 @@
 
 //
-//  File.swift
+//  SearchImageQueryModel.swift
 //  PBSearchImage
 //
 //  Created by Mohammad Kamar Shad on 9/24/20.
@@ -9,7 +9,7 @@
 
 import Foundation
 
-struct ImageListRequestModel: Codable {
+struct SearchImageQueryModel: Codable {
     var query: String
     var pageNo: String
     var apiKey: String

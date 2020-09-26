@@ -10,9 +10,9 @@
 @testable import PBSearchImage
 import Foundation
 
-extension ImageListRequestModel {
+extension SearchImageQueryModel {
     
-    static var defaultQueryModel: ImageListRequestModel  {
-        return ImageListRequestModel(query: "Apple", pageNo: "1", apiKey: APIConstant.apiKey)
+    static var defaultQueryModel: SearchImageQueryModel  {
+        return SearchImageQueryModel(query: "Apple", pageNo: "1", apiKey: APIConstants.apiKey)
     }
 }

@@ -21,7 +21,7 @@ class RecentSearchDatabaseAdapterTests: QuickSpec {
             context("when getRecentSearchs called") {
                 context("and no search was performed earlier") {
                     beforeEach {
-                        self.dbAdapter = RecentSearchDatabaseAdapter(with: UserDefaultsManagerMock())
+                        self.dbAdapter = RecentSearchDatabaseAdapter(with: DatabaseManagerMock())
                     }
                     afterEach {
                         self.dbAdapter = nil
@@ -33,7 +33,7 @@ class RecentSearchDatabaseAdapterTests: QuickSpec {
                 }
                 context("and few searches were performed earlier") {
                     beforeEach {
-                        let persistentStore = UserDefaultsManagerMock()
+                        let persistentStore = DatabaseManagerMock()
                         persistentStore[PersistentKeys.recentSearch] = ["Search 1", "Search 2"]
                         self.dbAdapter = RecentSearchDatabaseAdapter(with: persistentStore)
                     }
@@ -51,7 +51,7 @@ class RecentSearchDatabaseAdapterTests: QuickSpec {
             context("when saveRecentSearch called") {
                 context("and no search was performed earlier") {
                     beforeEach {
-                        self.dbAdapter = RecentSearchDatabaseAdapter(with: UserDefaultsManagerMock())
+                        self.dbAdapter = RecentSearchDatabaseAdapter(with: DatabaseManagerMock())
                         self.dbAdapter.saveRecentSearch(Constants.defaultKeyword)
                     }
                     it("should not have more than that") {
@@ -62,7 +62,7 @@ class RecentSearchDatabaseAdapterTests: QuickSpec {
                 }
                 context("and few searches were performed earlier") {
                     beforeEach {
-                        let persistentStore = UserDefaultsManagerMock()
+                        let persistentStore = DatabaseManagerMock()
                         persistentStore[PersistentKeys.recentSearch] = ["Search 1", "Search 2"]
                         self.dbAdapter = RecentSearchDatabaseAdapter(with: persistentStore)
                         self.dbAdapter.saveRecentSearch(Constants.defaultKeyword)
@@ -75,7 +75,7 @@ class RecentSearchDatabaseAdapterTests: QuickSpec {
                 }
                 context("and when same search is performed") {
                     beforeEach {
-                        let persistentStore = UserDefaultsManagerMock()
+                        let persistentStore = DatabaseManagerMock()
                         persistentStore[PersistentKeys.recentSearch] = ["Search 1", Constants.defaultKeyword]
                         self.dbAdapter = RecentSearchDatabaseAdapter(with: persistentStore)
                         self.dbAdapter.saveRecentSearch(Constants.defaultKeyword)

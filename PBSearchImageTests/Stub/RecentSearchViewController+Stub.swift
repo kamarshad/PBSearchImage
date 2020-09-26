@@ -10,7 +10,7 @@
 import UIKit
 
 extension RecentSearchViewController {
-    static func stub(with databasePeristable: DataBasePersistable = UserDefaultsManagerMock()) -> RecentSearchViewController? {
+    static func stub(with databasePeristable: DataBasePersistable = DatabaseManagerMock()) -> RecentSearchViewController? {
         let storyboard = UIStoryboard(name: Storyboard.home, bundle: Bundle.main)
         let recentSearchVC = storyboard.instantiateViewController(withIdentifier: RecentSearchViewController.identifier) as! RecentSearchViewController
         recentSearchVC.viewModel = RecentSearchViewModel(databasePeristable: databasePeristable)

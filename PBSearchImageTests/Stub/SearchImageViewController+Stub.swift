@@ -16,7 +16,7 @@ extension SearchImageViewController {
         let mockNetworkClient = NetworkClientMock()
         mockNetworkClient.json = ImageListModel.jsonStub(with: fileName)
         searchListVC.viewModel = ImageListViewModel(networkClient: mockNetworkClient)
-        searchListVC.recentSearchViewModel = RecentSearchViewModel(databasePeristable: UserDefaultsManagerMock())
+        searchListVC.recentSearchViewModel = RecentSearchViewModel(databasePeristable: DatabaseManagerMock())
         _ = searchListVC.view
         searchListVC.simulateViewLifeCycle()
         return searchListVC

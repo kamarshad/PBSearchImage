@@ -14,12 +14,12 @@ import Quick
 
 class SearchImageNetworkAdapterTests: QuickSpec {
     var networkAdapter: SearchImageNetworkAdapter!
-    var queryModel: ImageListRequestModel!
+    var queryModel: SearchImageQueryModel!
     
     override func spec() {
         describe("SearchImageNetworkAdapter UT's") {
             beforeEach {
-                self.queryModel = ImageListRequestModel.defaultQueryModel
+                self.queryModel = SearchImageQueryModel.defaultQueryModel
                 let mocknetwork = NetworkClientMock()
                 mocknetwork.json = ImageListModel.jsonStub()
                 self.networkAdapter = SearchImageNetworkAdapter(networkClient: mocknetwork)

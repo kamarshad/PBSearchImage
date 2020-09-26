@@ -25,10 +25,10 @@
 		CD4A48DC251DB141006F962C /* CustomErrorType+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48A3251DB141006F962C /* CustomErrorType+Helper.swift */; };
 		CD4A48DD251DB141006F962C /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48A6251DB141006F962C /* ImageListViewModel.swift */; };
 		CD4A48DE251DB141006F962C /* DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48A8251DB141006F962C /* DynamicType.swift */; };
-		CD4A48DF251DB141006F962C /* PBImageNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AA251DB141006F962C /* PBImageNetworkConstants.swift */; };
+		CD4A48DF251DB141006F962C /* PBNetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AA251DB141006F962C /* PBNetworkConstants.swift */; };
 		CD4A48E0251DB141006F962C /* PBAPIEndpointConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD4A48AB251DB141006F962C /* PBAPIEndpointConfig.plist */; };
 		CD4A48E1251DB141006F962C /* SearchImageNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AC251DB141006F962C /* SearchImageNetworkAdapter.swift */; };
-		CD4A48E2251DB141006F962C /* ImageListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AE251DB141006F962C /* ImageListRequestModel.swift */; };
+		CD4A48E2251DB141006F962C /* SearchImageQueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AE251DB141006F962C /* SearchImageQueryModel.swift */; };
 		CD4A48E3251DB141006F962C /* ImageListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48AF251DB141006F962C /* ImageListModel.swift */; };
 		CD4A48E4251DB141006F962C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48B1251DB141006F962C /* DetailViewController.swift */; };
 		CD4A48E5251DB141006F962C /* SearchImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A48B2251DB141006F962C /* SearchImageCollectionViewCell.swift */; };
@@ -64,7 +64,6 @@
 		CD4A4941251DFE27006F962C /* ImageRequestModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A4927251DFE27006F962C /* ImageRequestModel+Stub.swift */; };
 		CD4A4942251DFE27006F962C /* searchImageResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A4929251DFE27006F962C /* searchImageResponse.json */; };
 		CD4A4943251DFE27006F962C /* searchImageResponse1.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A492A251DFE27006F962C /* searchImageResponse1.json */; };
-		CD4A4944251DFE27006F962C /* searchImageResponse2.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4A492B251DFE27006F962C /* searchImageResponse2.json */; };
 		CD4A4945251DFE27006F962C /* DetailViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492C251DFE27006F962C /* DetailViewController+Stub.swift */; };
 		CD4A4946251DFE27006F962C /* SearchImageViewController+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492D251DFE27006F962C /* SearchImageViewController+Stub.swift */; };
 		CD4A4947251DFE27006F962C /* PBCodable+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A492E251DFE27006F962C /* PBCodable+Stub.swift */; };
@@ -116,10 +115,10 @@
 		CD4A48A3251DB141006F962C /* CustomErrorType+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CustomErrorType+Helper.swift"; sourceTree = "<group>"; };
 		CD4A48A6251DB141006F962C /* ImageListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
 		CD4A48A8251DB141006F962C /* DynamicType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicType.swift; sourceTree = "<group>"; };
-		CD4A48AA251DB141006F962C /* PBImageNetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBImageNetworkConstants.swift; sourceTree = "<group>"; };
+		CD4A48AA251DB141006F962C /* PBNetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBNetworkConstants.swift; sourceTree = "<group>"; };
 		CD4A48AB251DB141006F962C /* PBAPIEndpointConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PBAPIEndpointConfig.plist; sourceTree = "<group>"; };
 		CD4A48AC251DB141006F962C /* SearchImageNetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImageNetworkAdapter.swift; sourceTree = "<group>"; };
-		CD4A48AE251DB141006F962C /* ImageListRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListRequestModel.swift; sourceTree = "<group>"; };
+		CD4A48AE251DB141006F962C /* SearchImageQueryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImageQueryModel.swift; sourceTree = "<group>"; };
 		CD4A48AF251DB141006F962C /* ImageListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListModel.swift; sourceTree = "<group>"; };
 		CD4A48B1251DB141006F962C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CD4A48B2251DB141006F962C /* SearchImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -155,7 +154,6 @@
 		CD4A4927251DFE27006F962C /* ImageRequestModel+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageRequestModel+Stub.swift"; sourceTree = "<group>"; };
 		CD4A4929251DFE27006F962C /* searchImageResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse.json; sourceTree = "<group>"; };
 		CD4A492A251DFE27006F962C /* searchImageResponse1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse1.json; sourceTree = "<group>"; };
-		CD4A492B251DFE27006F962C /* searchImageResponse2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = searchImageResponse2.json; sourceTree = "<group>"; };
 		CD4A492C251DFE27006F962C /* DetailViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailViewController+Stub.swift"; sourceTree = "<group>"; };
 		CD4A492D251DFE27006F962C /* SearchImageViewController+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchImageViewController+Stub.swift"; sourceTree = "<group>"; };
 		CD4A492E251DFE27006F962C /* PBCodable+Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PBCodable+Stub.swift"; sourceTree = "<group>"; };
@@ -358,7 +356,7 @@
 		CD4A48A9251DB141006F962C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CD4A48AA251DB141006F962C /* PBImageNetworkConstants.swift */,
+				CD4A48AA251DB141006F962C /* PBNetworkConstants.swift */,
 				CD4A48AB251DB141006F962C /* PBAPIEndpointConfig.plist */,
 			);
 			path = Network;
@@ -367,7 +365,7 @@
 		CD4A48AD251DB141006F962C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD4A48AE251DB141006F962C /* ImageListRequestModel.swift */,
+				CD4A48AE251DB141006F962C /* SearchImageQueryModel.swift */,
 				CD4A48AF251DB141006F962C /* ImageListModel.swift */,
 			);
 			path = Model;
@@ -536,7 +534,6 @@
 			children = (
 				CD4A4929251DFE27006F962C /* searchImageResponse.json */,
 				CD4A492A251DFE27006F962C /* searchImageResponse1.json */,
-				CD4A492B251DFE27006F962C /* searchImageResponse2.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -697,7 +694,6 @@
 			files = (
 				CD4A4943251DFE27006F962C /* searchImageResponse1.json in Resources */,
 				CD4A4942251DFE27006F962C /* searchImageResponse.json in Resources */,
-				CD4A4944251DFE27006F962C /* searchImageResponse2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,7 +797,7 @@
 				CD4A48DB251DB141006F962C /* Reachability.swift in Sources */,
 				CD4A48F5251DB141006F962C /* NetworkModel.swift in Sources */,
 				CD4A48F0251DB141006F962C /* URLSessionAdapter.swift in Sources */,
-				CD4A48DF251DB141006F962C /* PBImageNetworkConstants.swift in Sources */,
+				CD4A48DF251DB141006F962C /* PBNetworkConstants.swift in Sources */,
 				CD4A48FB251DB3C5006F962C /* CustomErrorType.swift in Sources */,
 				CD4A48D7251DB141006F962C /* Encodable+Helper.swift in Sources */,
 				CD4A491A251DF6B2006F962C /* RecentSearchTableViewCell.swift in Sources */,
@@ -812,7 +808,7 @@
 				CD4A48F4251DB141006F962C /* JSONResponseParser.swift in Sources */,
 				CD4A4915251DF64E006F962C /* RecentSearchDatabaseAdapter.swift in Sources */,
 				CD4A4914251DF64E006F962C /* DataBasePersistable.swift in Sources */,
-				CD4A48E2251DB141006F962C /* ImageListRequestModel.swift in Sources */,
+				CD4A48E2251DB141006F962C /* SearchImageQueryModel.swift in Sources */,
 				CD4A48E3251DB141006F962C /* ImageListModel.swift in Sources */,
 				CD4A48DD251DB141006F962C /* ImageListViewModel.swift in Sources */,
 				CD4A4839251DA894006F962C /* AppDelegate.swift in Sources */,
@@ -943,7 +939,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -997,7 +993,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1014,7 +1010,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PBSearchImage/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1033,7 +1029,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PBSearchImage/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1053,7 +1049,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PBSearchImageTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1075,7 +1071,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PBSearchImageTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

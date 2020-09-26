@@ -39,7 +39,7 @@ class RecentSearchViewControllerTests: QuickSpec {
             }
             context("when view loaded and few searches performed by user") {
                 beforeEach {
-                    let persistentStore = UserDefaultsManagerMock()
+                    let persistentStore = DatabaseManagerMock()
                     persistentStore[PersistentKeys.recentSearch] = ["Recent Search 1", "Recent Search 2"]
                     self.recentSearchVC = RecentSearchViewController.stub(with: persistentStore)
                 }
@@ -52,7 +52,7 @@ class RecentSearchViewControllerTests: QuickSpec {
             }
             context("when user select any of the recent search from list") {
                 beforeEach {
-                    let persistentStore = UserDefaultsManagerMock()
+                    let persistentStore = DatabaseManagerMock()
                     persistentStore[PersistentKeys.recentSearch] = ["Recent Search 1", "Recent Search 2"]
                     self.recentSearchVC = RecentSearchViewController.stub(with: persistentStore)
                 }

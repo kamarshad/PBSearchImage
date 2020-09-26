@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Type Keyword" translatesAutoresizingMaskIntoConstraints="NO" id="a20-8Y-SgU">
+                            <searchBar contentMode="redraw" placeholder="Enter keyword to search images" translatesAutoresizingMaskIntoConstraints="NO" id="a20-8Y-SgU">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>

@@ -11,21 +11,19 @@ import UIKit
 class SearchImageViewController: UIViewController {
     @IBOutlet private (set) weak var collectionView: UICollectionView!
     @IBOutlet private (set) weak var searchBar: UISearchBar!
-    
-    var viewModel = ImageListViewModel(networkClient: NetworkClient(with: PBImageNetworkConstants.kSearchImage!))
+    private var canShowAlert: Bool = false
+    var viewModel = ImageListViewModel(networkClient: NetworkClient(with: PBNetworkConstants.kSearchImage))
     lazy var recentSearchViewModel: RecentSearchViewModel = {
-        return RecentSearchViewModel(databasePeristable: UserDefaultsManager())
+        return RecentSearchViewModel(databasePeristable: DatabaseManager())
     }()
     lazy var recentSearchController: RecentSearchViewController? = {
         return self.storyboard?.instantiateViewController(withIdentifier: RecentSearchViewController.identifier) as? RecentSearchViewController
     }()
-    
     private var searchQuery: String = Constants.emptyString {
         didSet {
             searchBar.text = searchQuery
         }
     }
-    private var canShowAlert: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +47,11 @@ class SearchImageViewController: UIViewController {
     
     private func configureRecentSearchVC() {
         removeRecentSearchVC()
-        // If there is no saved search found
+        // If there is no saved search found don't configure the recent search screen
         guard recentSearchViewModel.recentSearches.isNonEmpty, let recentSearchVC = recentSearchController else { return }
         addChild(recentSearchVC)
         let originY = searchBar.frame.size.height + searchBar.frame.origin.y
-        recentSearchVC.view.frame = CGRect(x: view.frame.origin.y, y: originY, width: view.frame.size.width, height: 130)
+        recentSearchVC.view.frame = CGRect(x: view.frame.origin.y, y: originY, width: view.frame.size.width, height: SearchImageConstants.recentSearchViewHeight)
         view.addSubview(recentSearchVC.view)
         view.bringSubviewToFront(recentSearchVC.view)
         recentSearchVC.recentSearchCompletion = { recentSearch in
@@ -141,9 +139,9 @@ extension SearchImageViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemHeight = indexPath.row == viewModel.fetchedRecords ? CollectionViewConstants.loadMoreItemHeight :
-            CollectionViewConstants.itemHeight
-        return CGSize(width: view.frame.size.width - CollectionViewConstants.leftAndRightPadding, height: itemHeight)
+        let itemHeight = indexPath.row == viewModel.fetchedRecords ? SearchImageConstants.loadMoreItemHeight :
+            SearchImageConstants.itemHeight
+        return CGSize(width: view.frame.size.width - SearchImageConstants.leftAndRightPadding, height: itemHeight)
     }
 }
 
@@ -172,8 +170,9 @@ extension SearchImageViewController: UISearchBarDelegate {
     }
 }
 
-private enum CollectionViewConstants {
+private enum SearchImageConstants {
     static let itemHeight: CGFloat = 150
     static let loadMoreItemHeight: CGFloat = 60
     static let leftAndRightPadding: CGFloat = 20
+    static let recentSearchViewHeight: CGFloat = 130
 }

@@ -1,5 +1,5 @@
 //
-//  UserDefaultsManagerMock.swift
+//  DatabaseManagerMock.swift
 //  PBSearchImageTests
 //
 //  Created by Mohammad Kamar Shad on 9/25/20.
@@ -9,7 +9,7 @@
 @testable import PBSearchImage
 import Foundation
 
-class UserDefaultsManagerMock: DataBasePersistable {
+class DatabaseManagerMock: DataBasePersistable {
     private var peristentStore: [String: Any] = [:]
 
     subscript<T>(keyName: PersistentKeys) -> [T]? {

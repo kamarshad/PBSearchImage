@@ -25,8 +25,9 @@ struct Storyboard {
  otherwise ideal practice is to keep it in enviornment configuration file access it accordingly
  */
 
-enum APIConstant {
+enum APIConstants {
     static let apiKey = "" //Your api key should be palced here
+    static let maxRecentSearches: Int = 10
 }
 
 // Considering the timeline using the messages here. better approach is to read the message from localised string file
@@ -41,18 +42,10 @@ enum UIStringConstants {
     static let responseMappingError = "Error occurred during the model mapping."
     static let generalMessage = "Something went wrong. Please try after sometime."
     static let invalidStatus = "Invalid response status is received."
-    static let apiKeyMissing = "API key is missing. Make sure a valid api key is added in APIConstant.\nFollow READ ME for more details."
+    static let apiKeyMissing = "API key is missing. Make sure a valid api key is added in APIConstants.\nFollow READ ME for more details."
     static let generalAlertTitle = "Alert"
     static let errorAlertTitle = "Error"
     static let ok = "Ok"
     static let cancel = "Cancel"
     static let noRecordFound = "No record found against the entered keyword. Kindly try with different keyword."
-}
-
-enum ModelConstants {
-    static let comma = ","
-    
-    // Display max three tags for each received image. If you want to display less or more than to any number just change the constant value.
-    // But server should also have that same number tags otherwise the default received tags will be displayed.
-    static let allowedMaxTag = 3
 }

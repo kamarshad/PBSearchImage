@@ -1,5 +1,5 @@
 //
-//  PBImageNetworkConstants.swift
+//  PBNetworkConstants.swift
 //  PBSearchImage
 //
 //  Created by Mohammad Kamar Shad on 9/24/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PBImageNetworkConstants: NetworkConstantAdapter {
+struct PBNetworkConstants: NetworkConstantAdapter {
     static let networkPlistFileName = "PBAPIEndpointConfig"
     static let networkAdapterKey = "endpointConfig"
 

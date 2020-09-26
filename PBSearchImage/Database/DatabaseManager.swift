@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserDefaultsManager: DataBasePersistable {
+class DatabaseManager: DataBasePersistable {
     private let db: UserDefaults
     
     init() {

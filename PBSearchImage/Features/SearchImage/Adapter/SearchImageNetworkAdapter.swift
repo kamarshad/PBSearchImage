@@ -25,8 +25,8 @@ class SearchImageNetworkAdapter {
         }
     }
     
-    func fetchImages(with queryModel: ImageListRequestModel?,
-                     completionHandler: @escaping (_ model: ImageListModel?, _ error: CustomError?) -> Void) {
+    func fetchImages(with queryModel: SearchImageQueryModel?,
+                     completionHandler: @escaping (_ model: ImageListable?, _ error: CustomError?) -> Void) {
         guard let queryParam = queryModel?.toDictionary as? QueryParameters else {
             completionHandler(nil, CustomError(type: .invalidRequestFormat))
             return

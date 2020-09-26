@@ -148,7 +148,7 @@ class SearchImageViewControllerTests: QuickSpec {
                     beforeEach {
                         let currentText = Constants.defaultKeyword
                         self.searchImageVC.searchBar.text = currentText
-                        let persistentStore = UserDefaultsManagerMock()
+                        let persistentStore = DatabaseManagerMock()
                         persistentStore[PersistentKeys.recentSearch] = [Constants.defaultKeyword, "Recent Search 2"]
                         self.searchImageVC.recentSearchViewModel = RecentSearchViewModel(databasePeristable: persistentStore)
                         _ = self.searchImageVC.searchBar.delegate?.searchBarShouldBeginEditing?(self.searchImageVC.searchBar)
@@ -162,7 +162,7 @@ class SearchImageViewControllerTests: QuickSpec {
                         beforeEach {
                             let currentText = Constants.defaultKeyword
                             self.searchImageVC.searchBar.text = currentText
-                            let persistentStore = UserDefaultsManagerMock()
+                            let persistentStore = DatabaseManagerMock()
                             persistentStore[PersistentKeys.recentSearch] = ["Recent Search 1", "Recent Search 2"]
                             let recentSearchViewModel = RecentSearchViewModel(databasePeristable: persistentStore)
                             self.searchImageVC.recentSearchViewModel = recentSearchViewModel

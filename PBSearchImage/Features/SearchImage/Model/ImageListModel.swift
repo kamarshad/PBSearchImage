@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ImageListModel: Codable {
+struct ImageListModel: Codable, ImageListable {
     var totalRecords: Int
     var records: [ImageModel]
     
@@ -16,7 +16,14 @@ class ImageListModel: Codable {
         case totalRecords = "totalHits"
         case records = "hits"
     }
-    
+}
+
+protocol ImageListable {
+    var totalRecords: Int { get }
+    var records: [ImageModel] { get set }
+}
+
+extension ImageListable {
     // MARK: Helper properties
     var fetchedRecords: Int {
         return records.count
@@ -29,7 +36,7 @@ class ImageListModel: Codable {
     }
 }
 
-class ImageModel: Codable, ImageDisplayable {
+struct ImageModel: Codable, ImageDisplayable {
     var id: Int
     var previewURL: String
     var largeImageURL: String
@@ -42,6 +49,7 @@ class ImageModel: Codable, ImageDisplayable {
 }
 
 protocol ImageDisplayable {
+    var id: Int { get }
     var largeImageURL: String { get }
     var previewURL: String { get  }
 }

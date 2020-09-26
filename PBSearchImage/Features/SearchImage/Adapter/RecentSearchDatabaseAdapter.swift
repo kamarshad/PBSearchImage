@@ -12,7 +12,7 @@ class RecentSearchDatabaseAdapter {
     private var dbManager: DataBasePersistable
     private let maxSearchResult: Int
     
-    init(with dbManager: DataBasePersistable, maxSearchResult: Int = 10) {
+    init(with dbManager: DataBasePersistable, maxSearchResult: Int = APIConstants.maxRecentSearches) {
         self.dbManager = dbManager
         self.maxSearchResult = maxSearchResult
     }

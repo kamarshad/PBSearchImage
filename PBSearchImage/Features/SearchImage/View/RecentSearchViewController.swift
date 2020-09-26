@@ -13,7 +13,7 @@ typealias RecentSearchCompletionBlock = (_ recentSearch: String) -> Void
 
 class RecentSearchViewController: UIViewController {
     @IBOutlet private (set) var tableView: UITableView!
-    var viewModel = RecentSearchViewModel(databasePeristable: UserDefaultsManager())
+    var viewModel = RecentSearchViewModel(databasePeristable: DatabaseManager())
     var recentSearchCompletion: RecentSearchCompletionBlock?
     private (set) var recentSearches: [String] = []
     

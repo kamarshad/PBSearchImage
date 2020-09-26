@@ -13,7 +13,7 @@ class ImageListViewModel {
     private let networkClient: NetworkClientAdapter
     private (set) var imageListData: DynamicType<[ImageDisplayable]> = DynamicType([])
     private (set) var isFetchRecordInProgress = false
-    private (set) var imageList: ImageListModel?
+    private (set) var imageList: ImageListable?
     private (set) var pageNo: Int = 1
     
     var onError: ((CustomError?) -> Void)?
@@ -78,11 +78,11 @@ class ImageListViewModel {
         }
     }
     
-    private func prepareRequestModel(query: String) -> ImageListRequestModel {
-        return ImageListRequestModel(query: query, pageNo: "\(pageNo)", apiKey: APIConstant.apiKey)
+    private func prepareRequestModel(query: String) -> SearchImageQueryModel {
+        return SearchImageQueryModel(query: query, pageNo: "\(pageNo)", apiKey: APIConstants.apiKey)
     }
     
-    private func handleResponse(model: ImageListModel, releasePreviousResult: Bool, updatePageNo: Bool) {
+    private func handleResponse(model: ImageListable, releasePreviousResult: Bool, updatePageNo: Bool) {
         updatePageCount = updatePageNo
         if releasePreviousResult {
             imageList = nil
