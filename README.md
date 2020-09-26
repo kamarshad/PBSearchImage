@@ -43,7 +43,7 @@ Considering the timeline, I've mainly wrote the unit test cases for the Source f
 
 <img width="1281" alt="Screen Shot 2020-09-25 at 11 07 28 PM" src="https://user-images.githubusercontent.com/1333329/94298548-f554de80-ff83-11ea-82c7-f7e03eac9e44.png">
 
-### Design architecture/patterns followed ###
+### Design architecture and principle followed ###
 * MVVM
 * SOLID
 * DRY
