@@ -1,5 +1,5 @@
 # PBSearchImage
-This is an iOS application developed using Swift programming language. It is based on the MVVM design architecture and followed the SOLID and DRY principle as much as possible. It provides the interface to search image from Pixabay (https://pixabay.com/). 
+This is an iOS application developed using Swift programming language. It is based on the MVVM design architecture and followed the SOLID and DRY principle as much as possible. It provides the interface to search image from Pixabay (https://pixabay.com/) and view in full screen. 
 
 ### Features ###
 * Search images from pixabay.
@@ -8,7 +8,7 @@ This is an iOS application developed using Swift programming language. It is bas
 * Show recently search keywords. Once user taps on search bar all (As of now recent search limit is 10, which you can change in `RecentSearchDatabaseAdapter` ) previous searched keywords will be displayed. 
 * Show Image in full screen mode along with the left/right swipe. 
 * Auto downloading of images using Kingfisher library (https://github.com/onevcat/Kingfisher)
-* Upload the crash reports to firebase analytics
+* Upload the crash reports to firebase crashlytics
 
 ### Tool and Language ###
 * Xcode: 11.x
@@ -16,12 +16,12 @@ This is an iOS application developed using Swift programming language. It is bas
 * Device supported: iPhone and iPad 
 * Orientation:  Portrait
 * Minimum iOS deployment target: 11.0 and above
-* App run well and tested on iPhone8 plus 13.0
+* App run well and tested on iPhone8 plus and iOS 13.0
 
 ### ThirdParty Libraries used ###
 * Kingfisher to download the images
 * Nimble and Quick to write the Unit test case 
-
+* Firebase crashlytics to report the crash logs
 
 ### Recorded Video and Snapshot ###
 
@@ -39,7 +39,7 @@ To take a over view of application, go through the Youtube video link https://ww
 ### Unit Test cases and code coverage ###
 I've written unit test cases to ensure the code shoudl work fine. If any unintended code changes are made those changes could be observed without easily. It also ensures written code is working as expected and documented if new developer joines the project can go through the UT's and understand it as much as possible.
 
-Considering the timeline, I've mainly wrote the unit test cases for the Source files placed inside the **Features** folder. I've tried to maintianed the 90% plus test code coverage. Kindly have a look at below screen shot.
+Considering the timeline, I've mainly wrote the unit test cases for the Source files placed inside the **Features** folder. I've tried to maintian the 100% test code coverage. Kindly have a look at below screen shot.
 
 <img width="1281" alt="Screen Shot 2020-09-25 at 11 07 28 PM" src="https://user-images.githubusercontent.com/1333329/94298548-f554de80-ff83-11ea-82c7-f7e03eac9e44.png">
 
